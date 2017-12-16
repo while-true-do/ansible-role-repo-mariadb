@@ -1,0 +1,27 @@
+# CHANGEME: Fill in all needed information
+dependencies: []
+
+galaxy_info:
+  author: daniel@while-true-do.org
+  description: CHANGEME
+
+  issue_tracker_url: https://github.com/while-true-do/ansible-role-repo-mariadb/issues
+  github_branch: master
+  license: BSD
+
+  min_ansible_version: 2.1
+
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  - name: Fedora
+    versions:
+    - 26
+
+  galaxy_tags:
+    - locale
+    - config
+    - common
+    - keyboard
+    - localization

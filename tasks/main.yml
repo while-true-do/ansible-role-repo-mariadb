@@ -1,0 +1,25 @@
+---
+- name: Add repository MariaDB for CentOS or Fedora
+  yum_repository:
+    name: mariadb
+    description: MariaDB
+    file: MariaDB
+    baseurl: http://yum.mariadb.org/{{ wtd_repo_mariadb_version }}/{{ ansible_distribution.lower() }}{{ansible_distribution_major_version }}-amd64
+    gpgcheck: yes
+    gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+  when: (ansible_distribution == "CentOS" or ansible_distribution == "Fedora")
+
+- name: Add repository MariaDB for RedHat
+  yum_repository:
+    name: mariadb
+    description: MariaDB
+    file: MariaDB
+    baseurl: http://yum.mariadb.org/{{ wtd_repo_mariadb_version }}/rhel{{ansible_distribution_major_version }}-amd64
+    gpgcheck: yes
+    gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+  when: (ansible_distribution == "RedHat")
+
+- name: Add key for repository MariaDB
+  rpm_key:
+    state: present
+    key: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
