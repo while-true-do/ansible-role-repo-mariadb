@@ -1,6 +1,5 @@
 ---
 # TODO: Build better testing for multiple containers and os support
-# CHANGEME: Fill in all needed information and remove this line
 language: python
 python: 
   - "2.7"
@@ -28,7 +27,7 @@ install:
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
   # Link github repo to ansible-galaxy name
-  - ln -s  $PWD ../while-true-do.CHANGEME
+  - ln -s  $PWD ../while-true-do.repo-mariadb
 
 # Run the tests
 script:

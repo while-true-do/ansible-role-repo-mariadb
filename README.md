@@ -1,15 +1,17 @@
 Empty space for build-links, logos or something like this.
 
 # Ansible Role: Repo-MariaDB
-| This role installes yum repository for MariaDB from official [MariaDB Site](https://downloads.mariadb.org/mariadb/repositories/)
+| A role that installes yum repository for MariaDB from official [MariaDB Site](https://downloads.mariadb.org/mariadb/repositories/)
 
-- It will create MariaDB.repo under /etc/yum.repos.d
-- It will import the rpm key from here [https://yum.mariadb.org/RPM-GPG-KEY-MariaDB]
+- It will create MariaDB.repo in /etc/yum.repos.d/
+- It will import the rpm key from <https://yum.mariadb.org/RPM-GPG-KEY-MariaDB>
 
 ## Motivation
+
 This role is needed to get a proper repo for newer MariaDB versions on CentOS 7.
 
 ## Installation
+
 Install from [Ansible Galaxy](https://galaxy.ansible.com/while-true-do.repo-mariadb)
 
 ```
@@ -23,9 +25,6 @@ git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while-t
 ```
 
 ## Requirements
-CHANGEME
-Special Packages, please inspect used modules to list the requirements here.
-Please list all modules:
 
 **Used Modules**
 
@@ -33,39 +32,17 @@ Please list all modules:
 -   [rpm_key](http://docs.ansible.com/ansible/latest/rpm_key_module.html)
 
 ## Role Variables
-CHANGEME
-The variable files should be self-explanatary and pasted/linked here.
-Explanation should be done **in** the files, if needed.
 ```yaml
 # defaults/main.yml
 wtd_repo_mariadb_version: '10.2'
 ```
 
-```yaml
-# vars/main.yml
-bar: foo
-```
-
 ## Dependencies
-CHANGEME
-Describe, if other roles are needed and link them here.
 
-Dependency 1:
-
-```
-ansible-galaxy install -r requirements.yml
-```
-
-- vars
-
-Dependency 2:
-
-- link
-- install
-- vars
+None.
 
 ## Example Playbook
-CHANGEME
+
 Simple Example:
 
 ```yaml
@@ -74,17 +51,8 @@ Simple Example:
     - { role: while-true-do.repo-mariadb }
 ```
 
-Advanced Example:
-
-```yaml
-- hosts: servers 
-  roles:
-    - { role: while-true-do.repo-mariadb, foo: bar, bar: foo }
-```
-
 ## Testing
-CHANGEME
-Describe, how the role can be tested.
+
 All tests should be put in [test directory](./tests/).
 
 ## Contribute / Bugs
