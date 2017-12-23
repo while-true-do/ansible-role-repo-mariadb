@@ -29,8 +29,9 @@ git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while-t
 
 **Used Modules**
 
--   [yum_repository](http://docs.ansible.com/ansible/latest/yum_repository_module.html)
--   [rpm_key](http://docs.ansible.com/ansible/latest/rpm_key_module.html)
+-   [command_module](http://docs.ansible.com/ansible/latest/command_module.html)
+-   [rpm_key_module](http://docs.ansible.com/ansible/latest/rpm_key_module.html)
+-   [yum_repository_module](http://docs.ansible.com/ansible/latest/yum_repository_module.html)
 
 ## Role Variables
 ```yaml
