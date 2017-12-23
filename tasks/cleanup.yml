@@ -1,0 +1,13 @@
+---
+- name: Remove key for repository MariaDB when disabled
+  rpm_key:
+    state: absent
+    key: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+  when: not wtd_repo_mariadb_enabled
+
+- name: Remove repository MariaDB when disabled
+  yum_repository:
+    name: mariadb
+    file: MariaDB
+    state: absent
+  notify: Cleanup yum metadata

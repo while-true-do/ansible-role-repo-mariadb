@@ -5,6 +5,7 @@ Empty space for build-links, logos or something like this.
 
 - It will create MariaDB.repo in /etc/yum.repos.d/
 - It will import the rpm key from <https://yum.mariadb.org/RPM-GPG-KEY-MariaDB>
+- If wtd_repo_mariadb_enabled is set to false it will remove the gpg-key and repository file
 
 ## Motivation
 
@@ -34,6 +35,7 @@ git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while-t
 ## Role Variables
 ```yaml
 # defaults/main.yml
+wtd_repo_mariadb_enabled: True
 wtd_repo_mariadb_version: '10.2'
 ```
 

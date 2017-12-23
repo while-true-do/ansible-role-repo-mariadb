@@ -1,2 +1,3 @@
 ---
+wtd_repo_mariadb_enabled: True
 wtd_repo_mariadb_version: '10.2'
