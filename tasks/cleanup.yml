@@ -10,4 +10,8 @@
     name: mariadb
     file: MariaDB
     state: absent
-  notify: Cleanup yum metadata
+
+- name: Cleanup yum metadata
+  command: yum clean metadata
+  args:
+    warn: no
