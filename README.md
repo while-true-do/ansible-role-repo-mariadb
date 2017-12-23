@@ -36,8 +36,11 @@ git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while-t
 ## Role Variables
 ```yaml
 # defaults/main.yml
-wtd_repo_mariadb_enabled: True
-wtd_repo_mariadb_version: '10.2'
+wtd_repo_mariadb_version: "10.2"
+
+wtd_repo_mariadb_supported_versions_centos: [ "5.5", "10.1", "10.2", "10.3" ]
+wtd_repo_mariadb_supported_versions_fedora: [ "10.2", "10.3" ]
+wtd_repo_mariadb_supported_versions_redhat: [ "5.5", "10.1", "10.2", "10.3" ]
 ```
 
 ## Dependencies

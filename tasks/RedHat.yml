@@ -1,4 +1,9 @@
 ---
+- name: Fail if MariaDB version is not supported on {{ ansible_distribution }}
+  fail:
+    msg: "MariaDB version {{ wtd_repo_mariadb_version }} is not supported on {{ ansible_distribution }}. See https://downloads.mariadb.org/mariadb/repositories/"
+  when: wtd_repo_mariadb_version not in wtd_repo_mariadb_supported_versions_redhat
+
 - name: Add repository MariaDB
   yum_repository:
     name: mariadb
