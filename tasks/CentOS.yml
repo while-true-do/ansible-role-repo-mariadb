@@ -14,8 +14,8 @@
     gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
   register: wtd_repo_mariadb_added
 
-- name: Refresh yum metadata if repository MariaDB was added
-  command: yum makecache fast
+- name: Cleanup yum metadata if repository MariaDB was added
+  command: yum clean metadata
   args:
     warn: no
   when: wtd_repo_mariadb_added.changed
