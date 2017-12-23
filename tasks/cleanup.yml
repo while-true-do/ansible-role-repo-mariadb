@@ -10,8 +10,10 @@
     name: mariadb
     file: MariaDB
     state: absent
+  register: wtd_repo_mariadb_removed
 
-- name: Cleanup yum metadata
+- name: Cleanup yum metadata if repository MariaDB was removed
   command: yum clean metadata
   args:
     warn: no
+  when: wtd_repo_mariadb_removed.changed
