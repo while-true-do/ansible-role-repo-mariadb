@@ -12,3 +12,10 @@
     baseurl: "http://yum.mariadb.org/{{ wtd_repo_mariadb_version }}/{{ ansible_distribution.lower() }}{{ansible_distribution_major_version }}-amd64"
     gpgcheck: yes
     gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+  register: wtd_repo_mariadb_added
+
+- name: Refresh yum metadata if repository MariaDB was added
+  command: yum makecache fast
+  args:
+    warn: no
+  when: wtd_repo_mariadb_added.changed
