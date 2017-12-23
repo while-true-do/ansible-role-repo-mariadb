@@ -1,0 +1,9 @@
+---
+- name: Add repository MariaDB
+  yum_repository:
+    name: mariadb
+    description: MariaDB
+    file: MariaDB
+    baseurl: "http://yum.mariadb.org/{{ wtd_repo_mariadb_version }}/rhel{{ansible_distribution_major_version }}-amd64"
+    gpgcheck: yes
+    gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
