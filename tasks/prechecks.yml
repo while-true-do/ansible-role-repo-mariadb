@@ -1,0 +1,31 @@
+---
+- name: Set wtd_repo_mariadb_version if repo not enabled
+  set_fact:
+    wtd_repo_mariadb_version: "5.5"
+  when: not wtd_repo_mariadb_enabled
+
+- name: Get installed MariaDB version
+  shell: "yum list installed {{ item }} | grep {{ item }} | awk {'print $2'} | cut -d'-' -f1 | cut -d':' -f2 | cut -d'.' -f1,2"
+  register: wtd_repo_mariadb_package_versions
+  args:
+    warn: no
+  ignore_errors: true
+  changed_when: wtd_repo_mariadb_package_versions.rc == 1
+  failed_when: wtd_repo_mariadb_package_versions.rc != 1 and wtd_repo_mariadb_package_versions.rc != 0
+  with_items:
+    - mariadb-server
+    - MariaDB-server
+
+- name: Fail if downgrade is configured for MariaDB
+  fail:
+    msg: "MariaDB downgrade from version {{ item.stdout }} to version {{ wtd_repo_mariadb_version }} is not supported"
+  when: (item.stdout != "") and (wtd_repo_mariadb_version | float < item.stdout | float)
+  with_items:
+    - "{{ wtd_repo_mariadb_package_versions.results }}"
+
+- name: Fail if upgrade is configured for MariaDB
+  fail:
+    msg: "MariaDB upgrade is not supported"
+  when: (item.stdout != "") and (wtd_repo_mariadb_version | float > item.stdout | float)
+  with_items:
+    - "{{ wtd_repo_mariadb_package_versions.results }}"
