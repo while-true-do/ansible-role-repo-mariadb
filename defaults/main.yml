@@ -1,5 +1,4 @@
 ---
-wtd_repo_mariadb_enabled: true
 wtd_repo_mariadb_version: "10.2"
 
 wtd_repo_mariadb_supported_versions_centos: [ "5.5", "10.1", "10.2", "10.3" ]
