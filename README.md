@@ -9,7 +9,7 @@ Empty space for build-links, logos or something like this.
 
 ## Motivation
 
-This role is needed to get a proper repo for newer MariaDB versions on CentOS 7.
+This role is needed to get a proper repo for newer MariaDB versions directly from upstream.
 
 ## Installation
 
@@ -36,7 +36,6 @@ git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while-t
 ## Role Variables
 ```yaml
 # defaults/main.yml
-wtd_repo_mariadb_enabled: true
 wtd_repo_mariadb_version: "10.2"
 
 wtd_repo_mariadb_supported_versions_centos: [ "5.5", "10.1", "10.2", "10.3" ]
