@@ -2,6 +2,10 @@
 - name: "Include Add repository tasks for {{ ansible_distribution }}"
   include_tasks: "{{ ansible_distribution }}.yml"
 
+- name: "Include correct service name for repo MariaDB version: 5.5"
+  include_vars: service_name_5.5.yml
+  when: wtd_repo_mariadb_version == "5.5"
+
 - name: Add key for repository MariaDB
   rpm_key:
     state: present
