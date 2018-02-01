@@ -1,6 +1,6 @@
 ---
 wtd_repo_mariadb_version: "10.2"
 
-wtd_repo_mariadb_supported_versions_centos: [ "5.5", "10.1", "10.2", "10.3" ]
+wtd_repo_mariadb_supported_versions_centos: [ "10.1", "10.2", "10.3" ]
 wtd_repo_mariadb_supported_versions_fedora: [ "10.2", "10.3" ]
-wtd_repo_mariadb_supported_versions_redhat: [ "5.5", "10.1", "10.2", "10.3" ]
+wtd_repo_mariadb_supported_versions_redhat: [ "10.1", "10.2", "10.3" ]
