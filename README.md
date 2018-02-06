@@ -5,11 +5,11 @@
 
 - It will create MariaDB.repo in /etc/yum.repos.d/
 - It will import the rpm key from <https://yum.mariadb.org/RPM-GPG-KEY-MariaDB>
-- If wtd_repo_mariadb_enabled is set to false it will remove the GPG key and repository file
+- If wtd_repo_mariadb_enabled is set to false it will remove the gpg-key and repository file
 
 ## Motivation
 
-This role is needed to get a proper repo for newer MariaDB versions directly from upstream.
+This role is needed to get a proper repository for newer MariaDB versions directly from upstream.
 
 ## Installation
 
