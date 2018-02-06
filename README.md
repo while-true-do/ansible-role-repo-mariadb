@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/while-true-do/ansible-role-repo-mariadbsvg?branch=master)](https://travis-ci.org/while-true-do/ansible-role-repo-mariadb)
 
 # Ansible Role: Repo-MariaDB
-| A role that installes yum repository for MariaDB from official [MariaDB Site](https://downloads.mariadb.org/mariadb/repositories/)
+| A role that installs yum repository for MariaDB from official [MariaDB Site](https://downloads.mariadb.org/mariadb/repositories/)
 
 - It will create MariaDB.repo in /etc/yum.repos.d/
 - It will import the rpm key from <https://yum.mariadb.org/RPM-GPG-KEY-MariaDB>
