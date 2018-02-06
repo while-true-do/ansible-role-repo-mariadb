@@ -1,15 +1,14 @@
-Empty space for build-links, logos or something like this.
+[![Build Status](https://travis-ci.org/while-true-do/ansible-role-repo-mariadb.svg?branch=master)](https://travis-ci.org/while-true-do/ansible-role-repo-mariadb)
 
-# Ansible Role: Repo-MariaDB
-| A role that installes yum repository for MariaDB from official [MariaDB Site](https://downloads.mariadb.org/mariadb/repositories/)
+# Ansible Role: Repository-MariaDB
+| A role that installs yum repository for MariaDB from official [MariaDB Site](https://downloads.mariadb.org/mariadb/repositories/)
 
-- It will create MariaDB.repo in /etc/yum.repos.d/
+- It will create a file for MariaDB in /etc/yum.repos.d/
 - It will import the rpm key from <https://yum.mariadb.org/RPM-GPG-KEY-MariaDB>
-- If wtd_repo_mariadb_enabled is set to false it will remove the gpg-key and repository file
 
 ## Motivation
 
-This role is needed to get a proper repo for newer MariaDB versions directly from upstream.
+This role is needed to get a proper repository for newer MariaDB versions directly from upstream.
 
 ## Installation
 
@@ -29,7 +28,6 @@ git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while-t
 
 **Used Modules**
 
--   [command_module](http://docs.ansible.com/ansible/latest/command_module.html)
 -   [rpm_key_module](http://docs.ansible.com/ansible/latest/rpm_key_module.html)
 -   [yum_repository_module](http://docs.ansible.com/ansible/latest/yum_repository_module.html)
 
