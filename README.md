@@ -12,16 +12,16 @@ This role is needed to get a proper repository for newer MariaDB versions direct
 
 ## Installation
 
-Install from [Ansible Galaxy](https://galaxy.ansible.com/while-true-do.repo-mariadb)
+Install from [Ansible Galaxy](https://galaxy.ansible.com/while_true_do.repo-mariadb)
 
 ```
-ansible-galaxy install while-true-do.repo-mariadb
+ansible-galaxy install while_true_do.repo-mariadb
 ```
 
 Install from [Github](https://github.com/while-true-do/ansible-role-repo-mariadb)
 
 ```
-git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while-true-do.repo-mariadb
+git clone https://github.com/while-true-do/ansible-role-repo-mariadb.git while_true_do.repo-mariadb
 ```
 
 ## Requirements
@@ -52,7 +52,7 @@ Simple Example:
 ```yaml
 - hosts: servers 
   roles:
-    - { role: while-true-do.repo-mariadb }
+    - { role: while_true_do.repo-mariadb }
 ```
 
 ## Testing
