@@ -1,6 +1,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: repo_mariadb
   author: while-true-do.org
   description: A role that installes yum repository for MariaDB from official MariaDB Site.
   company: while-true-do.org
